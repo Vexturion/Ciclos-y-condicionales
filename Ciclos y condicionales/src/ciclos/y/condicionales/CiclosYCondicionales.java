@@ -130,9 +130,116 @@ public class CiclosYCondicionales {
     // condicion: declaramos la condicion a cumplirse
     // iteracion: las sentencias que queremos ejecutar en cada repeticion
     for (int numero2= 9, x=1;x<11;System.out.println(numero2*x + " Es el resultado de multiplicar " + numero2 + " por " + x ),x++){
-        
+    }
+   
+    
+    // realizamos un programa que imprima los numeros pares del 1 al 100
+    // quedaria asi
+    for (int numero3=0;numero3<=100;System.out.println(numero3), numero3+=2){
     }
     
+   // o bien 
+    for (int numero4=1;numero4<101;numero4++){
+    if(numero4%2==0){
+        System.out.println(numero4);
+       }
     }
     
+    
+    //sentencias de salto: Java admite tres sentencias de salto = break continue y return
+    // break nos permite terminar una secuencia de instrucciones, salir de un ciclo y usarlo como un go to
+    // explicaremos los primeros 2
+    
+    // break
+    int valor= 10;
+    switch(valor){
+        case 10:
+            System.out.println("El numero es 10");
+            break;  //interrumpimos la secuencia, impidiendo que se ejecute default
+        default:
+            System.out.println("El numero NO es 10");
+            }
+    
+    for (int x= 1; x<101; x++){
+        if(x==50){
+            break;  // este break termina nuestro ciclo de 100 iteraciones en la numero 50
+        }
+        System.out.println(x);
+    }
+    System.out.println("Ciclo completado!");
+   
+    // otro ejemplo
+    for (int i= 0; i<3; i++){
+        System.out.println("Siguiente " + i + " : ");
+        for (int j=0; j<100; j++){
+            if(j==10){
+                break;       // break condiciona al ciclo a solo realizarse 10 veces y solo termina el ciclo donde fue tomado.
+            }
+            System.out.println(j + " ");
+        }
+        System.out.println();
+    }
+    System.out.println("Ciclo completado");
+    
+    
+    // continue
+    for (int x=0; x<10; x++){
+        if(x==5){
+            continue;  // continue saltara el codigo que se ejecutara despues cuando x valga 5. Al ejecutar, el numero 5 no se imprimira
+        }
+        System.out.println(x);
+    }
+    
+    
+   // unica sentencia
+   for(int i=65; i<77; i++)
+       System.out.println("Mensaje");  // en casos cuando solo se ejecute una linea de codigo no sera obligatorio usar {}
+   
+   // ejercicios 
+   // Mostrar en consola el mensaje de "Aprobado" en caso la calificación de un alumno sea mayor igual a 70
+   // en caso contrario mostrar el mensaje "Reprobado".
+   int promedio= 70;
+   if (promedio>=70){
+       System.out.println("Felicidades, has aprobado el curso");
+   } else {
+       System.out.println("Lo sentimos, has reprobado este curso");
+   }
+   
+   // Dado 3 números enteros, mostrar en consola los números de forma ascendente, de menor a mayor. 
+   // Ejemplo Números = 9, 50, 4 Salida = 4, 9, 50
+   int a= 4;
+   int b= 50;
+   int c= 9;
+   
+   if (a<b&&a<c){
+       System.out.println(a);
+   } else if (b<a&&b<c){
+       System.out.println(b);
+   } else {
+       System.out.println(c);
+   }
+    
+   if (a>b&&a<c||a>c&&a<b){
+       System.out.println(a);
+   } else if (b>a&&b<c||b>c&&b<a){
+       System.out.println(b);
+   } else {
+       System.out.println(c);
+   } 
+    
+   if (a>b&&a>c){
+       System.out.println(a);
+   } else if (b>a&&b>c){
+       System.out.println(b);
+   } else {
+       System.out.println(c);
+   } 
+    
+   // Imprimir en consola la tabla de multiplicar del número 9.
+   for (int factor=9, x=0; x<11; System.out.println(factor*x + " Es el resultado de multiplicar " + factor + " por " + x), x++){
+   }
+   
+   
+   
+    }
 }
