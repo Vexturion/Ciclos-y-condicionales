@@ -239,7 +239,41 @@ public class CiclosYCondicionales {
    for (int factor=9, x=0; x<11; System.out.println(factor*x + " Es el resultado de multiplicar " + factor + " por " + x), x++){
    }
    
+   // obtener la salida en consola con forma de escalera
    
+   // obtener la salida en consola con forma de pino
+
+   //Imprimir en consola los primero diez números de la serie Fibonacci.
+   int fibo= 1;
+   int n1= 0;
+   int n2= 1;
+   while (fibo<11){
+       int n3= n1+n2;
+       n1++;
+       n2++;
+       fibo++;
+   }
    
+   // Dado un número saber si este es primo o no.
+   int numero3= 13;
+   if (numero3%2==0){
+       System.out.println("Este no es un numero primo");
+   } else{
+       System.out.println("Este es un numero primo");
+   }
+   
+    
+    // Imprimir en consola todos los números múltiplos de 2. El ciclo finalizará cuando el último múltiplo sea menor a 4570 
+    int n4=1;
+    do {
+        int multiplicador=2*n4;
+        n4++;
+        System.out.println(multiplicador);
+    } while (n4<2286);
+    
+    
+    
+    
+    
     }
 }
